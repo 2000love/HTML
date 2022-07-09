@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>初学HTML搭建</title>
+    <link rel="stylesheet" type="text/css" href="DJY.css">
+</head>
+<body>
+    <div class="btn">
+        <p>最喜欢的游戏介绍</p>
+    </div>
+    <div class="top">
+        <a href="https://yys.163.com/" target="_blank">阴阳师主页</a>
+        <a href="自我介绍.html" target="_blank">自我介绍</a>
+        <a href="https://blog.csdn.net/qq_46475595?spm=1010.2135.3001.5343" target="_blank">CSDN主页</a>
+        <a href="http://t.csdn.cn/V1h8E" target="_blank" style="float:right">《通信软件开发与应用》课程结业报告</a>
+    </div>
+    <div class="content">
+    
+        <h1 class="avr">HTML静态网页的初步搭建</h1>
+    </div>
+
+
+    <div class="row">
+        <div class="centercolumn">
+            <div class="card">
+                <h2 id="biaoti">阴阳师游戏介绍</h2><br />
+                <hr />
+                <p style="text-indent:2em">
+                    《阴阳师》是网易游戏匠心巨制的3D半即时回合制RPG手游。以平安时代为背景,讲述人鬼共生的奇幻故事。
+                    在唯美写意的画风下，玩家将化身实力强大的阴阳师，与众多妖怪式神缔结契约，探寻不可思议的故事。
+                    恢弘而梦幻的世界观，万物皆可化灵。高沉浸感体验，以阴阳师独特视角，跨越阴阳守护两界羁绊，在彼世与式神一起战斗吧！
+                </p>
+            </div>
+            <br /><br />
+            <div class="card">
+                <h2 id="biaoti">背景介绍</h2><br />
+                <hr />
+                <p style="text-indent:2em">
+                    故事发生在人鬼共生的年代，原本属于阴界的魑魅魍魉，潜藏在人类的恐慌中伺机而动，阳界的秩序岌岌可危。
+                    幸而世间有着一群懂得观星测位、画符念咒，还可以跨越阴阳两界，甚至支配灵体的异能者，他们正各尽所能，
+                    为了维护阴阳两界的平衡赌上性命战斗并被世人尊称为“阴阳师”。
+                </p>
+            </div>
+            <br /><br />
+            <div class="card">
+                <h2 id="biaoti">角色设定</h2><br />
+                <hr />
+                <p style="text-indent:2em">
+                    游戏中玩家扮演一名阴阳师，其职责就是退治妖怪，玩家角色与被收服的式神作为作战单位一同参与到战斗中。
+                    游戏中玩家初始角色为安倍晴明，其余角色需要玩家角色到达一定等级时通关指定剧情才能解锁更换。
+                    <br />
+                    晴明：平安时代强大的阴阳师，性格冷峻飘逸。拥有忠诚的守护式神——小白，并先后认识了神乐、源博雅和八百比丘尼三位伙伴。
+                    <br />
+                    神乐：源氏的后代，性格单纯善良，具备通灵能力，被晴明遇到带回庭院。
+                    <br />
+                    源博雅：平安时代贵族，是皇室之后，同时也是一名武士。性格孤傲爽直，善用大弓，其弓箭具有射杀妖怪之力。从小桀骜不驯，喜欢冒险与挑战。遇到晴明和神乐之后，便经常光顾庭院。
+                    <br />
+                    八百比丘尼：误食人鱼肉不老不死，已活了几百年的神秘巫师。占卜到晴明是命中注定可以帮助其解除诅咒之人，便居住在凤凰林中等待晴明，后来便一直留在庭院。
+
+                </p>
+                
+            </div>
+        </div>
+
+
+    </div>
+   
+    
+    <br /><br />
+    <button class="bt" onclick="window.open('KF.html')">我对阴阳师的看法</button>
+
+    <script>
+    let mucics = document.getElementById('audio')
+    document.body.addEventListener('mousemove', function() {
+        setTimeout(() => {
+            mucics.play();
+        }, 2000);
+    }, false);
+    </script>
+    
+    <div class="footer">
+        <br />
+        <p>知其不可奈何而安之若命</p><br />
+        <p>修短随化 情随事迁</p><br />
+        <abbr title="QQ1522994746"><img class="someimg" src="./QQ.png" alt="" width="30"></abbr>
+        <abbr title="邮箱1522994746@qq.com"><img class="someimg" src="./QQ邮箱.png" alt="" width="30"></abbr>
+    </div>
+    <script>
+        //鼠标点击出现爱心特效，这部分特效是从一个网页搬过来的（https://blog.csdn.net/ungoing/article/details/125071691）
+        (function (window, document, undefined) {
+            var hearts = [];
+            window.requestAnimationFrame = (function () {
+                return window.requestAnimationFrame ||
+				window.webkitRequestAnimationFrame ||
+				window.mozRequestAnimationFrame ||
+				window.oRequestAnimationFrame ||
+				window.msRequestAnimationFrame ||
+				function (callback) {
+				    setTimeout(callback, 1000 / 60);
+				}
+            })();
+            init();
+            function init() {
+                css(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: absolute;}.heart:after{top: -5px;}.heart:before{left: -5px;}");
+                attachEvent();
+                gameloop();
+            }
+            function gameloop() {
+                for (var i = 0; i < hearts.length; i++) {
+                    if (hearts[i].alpha <= 0) {
+                        document.body.removeChild(hearts[i].el);
+                        hearts.splice(i, 1);
+                        continue;
+                    }
+                    hearts[i].y--;
+                    hearts[i].scale += 0.004;
+                    hearts[i].alpha -= 0.013;
+                    hearts[i].el.style.cssText = "left:" + hearts[i].x + "px;top:" + hearts[i].y + "px;opacity:" + hearts[i].alpha + ";transform:scale(" + hearts[i].scale + "," + hearts[i].scale + ") rotate(45deg);background:" + hearts[i].color;
+                }
+                requestAnimationFrame(gameloop);
+            }
+            function attachEvent() {
+                var old = typeof window.onclick === "function" && window.onclick;
+                window.onclick = function (event) {
+                    old && old();
+                    createHeart(event);
+                }
+            }
+            function createHeart(event) {
+                var d = document.createElement("div");
+                d.className = "heart";
+                hearts.push({
+                    el: d,
+                    x: event.clientX - 5,
+                    y: event.clientY - 5,
+                    scale: 1,
+                    alpha: 1,
+                    color: randomColor()
+                });
+                document.body.appendChild(d);
+            }
+            function css(css) {
+                var style = document.createElement("style");
+                style.type = "text/css";
+                try {
+                    style.appendChild(document.createTextNode(css));
+                } catch (ex) {
+                    style.styleSheet.cssText = css;
+                }
+                document.getElementsByTagName('head')[0].appendChild(style);
+            }
+            function randomColor() {
+                return "rgb(" + (~~(Math.random() * 255)) + "," + (~~(Math.random() * 255)) + "," + (~~(Math.random() * 255)) + ")";
+            }
+        })(window, document);
+    </script>
+</body>
+</html>
